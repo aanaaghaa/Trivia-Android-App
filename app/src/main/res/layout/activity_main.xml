@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/name"
+       android:id="@+id/question1"
+       android:layout_marginTop="@dimen/top_margin"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       android:textSize="@dimen/text_size"
+       android:gravity="center"
+       ></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name"
+        android:id="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/question1"
+        android:layout_margin="@dimen/text_size"
+        android:gravity="center"
+        ></EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/next"
+        android:id="@+id/nextButton"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/top_margin"
+        android:textSize="@dimen/text_size"
+        android:onClick="nextClicked"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
